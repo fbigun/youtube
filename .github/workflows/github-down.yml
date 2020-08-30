@@ -58,4 +58,5 @@ jobs:
       run: |
         curl -fsSL git.io/file-transfer | sh
         ./transfer cow --block 2621440 -s -p 64 --no-progress output 2>&1 | tee cowtransfer.log
+        ./transfer lzs --block 2621440 -s -p 64 --no-progress output 2>&1 | tee cowtransfer.log
         echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
